@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e23a5a47f0254e6389a98b118b68b955" Name="Diagram1">
+        <EntityTypeShape EntityType="CarsDBModel.Address" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsDBModel.Auto" Width="1.5" PointX="5.25" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsDBModel.Brand" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsDBModel.City" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsDBModel.Model" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsDBModel.Order" Width="1.5" PointX="7.5" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsDBModel.Payment" Width="1.5" PointX="12.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsDBModel.Review" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsDBModel.Street" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsDBModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsDBModel.TypeDriveUnit" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsDBModel.TypeOfPayment" Width="1.5" PointX="10.5" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsDBModel.User" Width="1.5" PointX="5.25" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsDBModel.UserRole" Width="1.5" PointX="3" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CarsDBModel.Warranty" Width="1.5" PointX="9.75" PointY="7.625" IsExpanded="true" />
+        <AssociationConnector Association="CarsDBModel.FK_Address_City" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDBModel.FK_Address_Street" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDBModel.FK_Auto_Address" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDBModel.FK_Auto_Brand" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDBModel.FK_Auto_Model" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDBModel.FK_Auto_TypeDriveUnit" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDBModel.FK_Order_Auto" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDBModel.FK_Review_Auto" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDBModel.FK_Order_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDBModel.FK_Order_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDBModel.FK_Payment_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDBModel.FK_Warranty_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDBModel.FK_Payment_TypeOfPayment" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDBModel.FK_Payment_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDBModel.FK_Review_User" ManuallyRouted="false" />
+        <AssociationConnector Association="CarsDBModel.FK_User_UserRole" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

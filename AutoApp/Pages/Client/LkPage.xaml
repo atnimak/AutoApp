@@ -1,0 +1,77 @@
+﻿<Page x:Class="AutoApp.Pages.Client.LkPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AutoApp.Pages.Client"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Личный кабинет клиента - Просмотр каталога автомобилей">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <ComboBox x:Name="BrandComboBox" HorizontalAlignment="Left"
+                      DisplayMemberPath="NameOfBrand" Margin="10,0,0,0"
+                      SelectionChanged="BrandComboBox_SelectionChanged"></ComboBox>
+            <ComboBox x:Name="TypeDriveUnitComboBox" HorizontalAlignment="Left"
+                      DisplayMemberPath="NameTypeDriveUnit" Margin="210,0,0,0"
+                      SelectionChanged="TypeDriveUnitComboBox_SelectionChanged"></ComboBox>
+        </Grid>
+
+        <DataGrid x:Name="AutoDataGrid" Grid.Row="1" CanUserDeleteRows="False"
+                  Margin="10" CanUserAddRows="False"
+                  IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Привод" Binding="{Binding TypeDriveUnit.NameTypeDriveUnit}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Модель" Binding="{Binding Model.NameOfModel}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Марка" Binding="{Binding Brand.NameOfBrand}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Год выпуска" Binding="{Binding YearOfCreate}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Пробег" Binding="{Binding Mileage}"></DataGridTextColumn>
+                <DataGridTextColumn Header="ВИН" Binding="{Binding VinNumber}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Price}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Description}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Мотор" Binding="{Binding Engine}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Собственники" Binding="{Binding Owners}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="Фото">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Margin="10" Width="80">
+                                <Image.Source>
+                                    <Binding Path="Image">
+                                        <Binding.TargetNullValue>
+                                            <BitmapImage UriSource="/AutoApp;component/Resources/image.png"></BitmapImage>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                            </Image>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="NewOrderButton" VerticalAlignment="Center"
+                                    HorizontalAlignment="Center" Click="NewOrderButton_Click"
+                                    Content="Заказать" Width="140" Height="30"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="BackButton" VerticalAlignment="Center"
+                HorizontalAlignment="Left" Click="BackButton_Click"
+                Content="Назад" Grid.Row="2">
+        </Button>
+        <Button x:Name="OrdersButton" VerticalAlignment="Center"
+        HorizontalAlignment="Right" Click="OrdersButton_Click"
+        Content="Заказы" Grid.Row="2">
+        </Button>
+    </Grid>
+</Page>

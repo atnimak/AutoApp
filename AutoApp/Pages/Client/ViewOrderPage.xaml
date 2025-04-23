@@ -1,0 +1,83 @@
+﻿<Page x:Class="AutoApp.Pages.Client.ViewOrderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AutoApp.Pages.Client"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Личный кабинет клиента - Просмотр заказов">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <DataGrid x:Name="OrdersDataGrid" Grid.Row="0" CanUserDeleteRows="False"
+                  Margin="10" CanUserAddRows="False"
+                  IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"></DataGridTextColumn>
+                <DataGridTemplateColumn Header="ФИО менеджера">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding User1.SecondName}"></TextBlock>
+                                <TextBlock Text=" "></TextBlock>
+                                <TextBlock Text="{Binding User1.FirstName}"></TextBlock>
+                                <TextBlock Text=" "></TextBlock>
+                                <TextBlock Text="{Binding User1.ThirdName}"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Дата заказа" Binding="{Binding DateOfSale, StringFormat='{}{0: yyyy-MM-dd}'}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Привод" Binding="{Binding Auto.TypeDriveUnit.NameTypeDriveUnit}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Модель" Binding="{Binding Auto.Model.NameOfModel}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Марка" Binding="{Binding Auto.Brand.NameOfBrand}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Год выпуска" Binding="{Binding Auto.YearOfCreate}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Пробег" Binding="{Binding Auto.Mileage}"></DataGridTextColumn>
+                <DataGridTextColumn Header="ВИН" Binding="{Binding Auto.VinNumber}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Auto.Price}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Описание" Binding="{Binding Auto.Description}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Мотор" Binding="{Binding Auto.Engine}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Собственники" Binding="{Binding Auto.Owners}"></DataGridTextColumn>
+                <DataGridTemplateColumn x:Name="StatusFlagCol" Header="Статус">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock x:Name="StatusFlag" Text="{Binding Path=Status}"/>
+                            <DataTemplate.Triggers>
+                                <DataTrigger Binding="{Binding Path=Status}" Value="False">
+                                    <Setter TargetName="StatusFlag" Property="TextBlock.Text" Value="Открыт" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding Path=Status}" Value="True">
+                                    <Setter TargetName="StatusFlag" Property="TextBlock.Text" Value="Закрыт" />
+                                </DataTrigger>
+                            </DataTemplate.Triggers>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Фото">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Margin="10" Width="80">
+                                <Image.Source>
+                                    <Binding Path="Auto.Image">
+                                        <Binding.TargetNullValue>
+                                            <BitmapImage UriSource="/AutoApp;component/Resources/image.png"></BitmapImage>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                            </Image>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="BackButton" VerticalAlignment="Center"
+                HorizontalAlignment="Center" Click="BackButton_Click"
+                Content="Назад" Grid.Row="1">
+        </Button>
+    </Grid>
+</Page>
