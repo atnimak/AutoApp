@@ -6,25 +6,25 @@
     <Application.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="14"></Setter>
-            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontFamily" Value="Times New Roman"></Setter>
         </Style>
         <Style TargetType="Label">
             <Setter Property="FontSize" Value="14"></Setter>
-            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontFamily" Value="Times New Roman"></Setter>
         </Style>
         <Style TargetType="TextBox">
             <Setter Property="Width" Value="300"></Setter>
             <Setter Property="Height" Value="30"></Setter>
             <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
             <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
-            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontFamily" Value="Times New Roman"></Setter>
         </Style>
         <Style TargetType="PasswordBox">
             <Setter Property="Width" Value="300"></Setter>
             <Setter Property="Height" Value="30"></Setter>
             <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
             <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
-            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontFamily" Value="Times New Roman"></Setter>
         </Style>
         <Style TargetType="Button">
             <Setter Property="Width" Value="140"></Setter>
@@ -32,20 +32,20 @@
             <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
             <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
             <Setter Property="Margin" Value="10"></Setter>
-            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
-            <Setter Property="Background" Value="#6681db"></Setter>
+            <Setter Property="FontFamily" Value="Times New Roman"></Setter>
+            <Setter Property="Background" Value="#7f7f7f"></Setter>
         </Style>
         <Style TargetType="ComboBox">
             <Setter Property="Width" Value="160"></Setter>
             <Setter Property="Height" Value="30"></Setter>
             <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
             <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
-            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontFamily" Value="Times New Roman"></Setter>
         </Style>
         <Style TargetType="RadioButton">
             <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
             <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
-            <Setter Property="FontFamily" Value="Comic Sans MS"></Setter>
+            <Setter Property="FontFamily" Value="Times New Roman"></Setter>
         </Style>
     </Application.Resources>
 </Application>

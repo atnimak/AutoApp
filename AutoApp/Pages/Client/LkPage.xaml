@@ -28,7 +28,7 @@
                   Margin="10" CanUserAddRows="False"
                   IsReadOnly="True" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Id" Binding="{Binding Id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="№" Binding="{Binding Id}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Привод" Binding="{Binding TypeDriveUnit.NameTypeDriveUnit}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Модель" Binding="{Binding Model.NameOfModel}"></DataGridTextColumn>
                 <DataGridTextColumn Header="Марка" Binding="{Binding Brand.NameOfBrand}"></DataGridTextColumn>

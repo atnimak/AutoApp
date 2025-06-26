@@ -14,7 +14,7 @@
             <RowDefinition Height="70"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Background="#6681db">
+        <Grid Grid.Row="0" Background="#7f7f7f">
             <Border Background="Transparent"
                     BorderBrush="Black"
                     BorderThickness="0,0,0,2">
@@ -34,6 +34,6 @@
 
         <Frame Grid.Row="1" x:Name="MainFrame"
                NavigationUIVisibility="Hidden"
-               Focusable="False" Background="#5964a1"></Frame>
+               Focusable="False" Background="#c3c3c3"></Frame>
     </Grid>
 </Window>

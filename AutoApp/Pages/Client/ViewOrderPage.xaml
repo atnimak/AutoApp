@@ -18,7 +18,7 @@
                   Margin="10" CanUserAddRows="False"
                   IsReadOnly="True" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Id" Binding="{Binding Id}"></DataGridTextColumn>
+                <DataGridTextColumn Header="№" Binding="{Binding Id}"></DataGridTextColumn>
                 <DataGridTemplateColumn Header="ФИО менеджера">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

@@ -20,9 +20,6 @@
             <ComboBox x:Name="ClientComboBox" Width="300"></ComboBox>
             <Label Content="Менеджер:"></Label>
             <ComboBox x:Name="ManagerComboBox" Width="300"></ComboBox>
-            <!--<Label Content="Id авто:"></Label>
-            <ComboBox x:Name="AutoComboBox" Width="300"
-                      DisplayMemberPath="Id"></ComboBox>-->
             <Label Content="Статус:"></Label>
             <CheckBox x:Name="StatusCheckBox"
                       VerticalAlignment="Center"
